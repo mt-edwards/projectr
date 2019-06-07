@@ -1,4 +1,4 @@
-#' A function to create a data science directory
+#' A function to create a data analysis project directory
 #'
 #' @return
 #' @export
@@ -15,7 +15,7 @@ structure_directory <- function() {
   write("data", file = ".gitignore", append = TRUE)
 }
 
-#' A function to locate project data
+#' A function to locate data for a data analysis project
 #'
 #' @param data_directory
 #'

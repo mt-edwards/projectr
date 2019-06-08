@@ -38,7 +38,7 @@ set_external_directory <- function(path) {
   write(glue::glue('  external_directory: "{path}"'), file = "config.yml", append = TRUE)
   if (fs::file_exists(".gitignore")) {
     write("config.yml", file = ".gitignore", append = TRUE)
-    }
+  }
 }
 
 #' Return File From External Project Directory
@@ -52,5 +52,5 @@ set_external_directory <- function(path) {
 #' @return absolute path to file
 #' @export
 external_file_path <- function(path) {
-  fs::path(config::get("external_directory"), file_name)
+  fs::path(config::get("external_directory"), path)
 }

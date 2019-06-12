@@ -1,12 +1,15 @@
 Package: projectr
-Title: What the Package Does (One Line, Title Case)
+Title: Data Analysis Prroject Tools
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Matthew",
            family = "Edwards",
            role = c("aut", "cre"),
            email = "mtedwards@protonmail.com")
-Description: What the package does (one paragraph).
+Description: projectr provides tools to facilitate a data analysis project. 
+These tools include a function to structure the project directory, a function to 
+set up a directory external to the project directory and a function to access
+files in the external directory.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

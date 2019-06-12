@@ -1,11 +1,11 @@
-#' Structure Data Analysis Project
+#' @title Structure Data Analysis Project
 #'
-#' structure_project creates a directory for data, a directory for notebooks and
-#' a directory for R scripts in the project directory. The directory for
-#' notebooks contains five subdirectories: 1_import, 2_tidy, 3_explore, 4_model
-#' and 5_communicate. These directories correspond to the five data analysis
-#' stages identified in R for Data Science by Hadley Wickham. The data directory
-#' is added to the .gitignore file if it exists.
+#' @description structure_project creates a directory for data, a directory for
+#' notebooks and a directory for R scripts in the project directory. The
+#' directory for notebooks contains five subdirectories: 1_import, 2_tidy,
+#' 3_explore, 4_model and 5_communicate. These directories correspond to the
+#' five data analysis stages identified in R for Data Science by Hadley Wickham.
+#' The data directory is added to the .gitignore file if it exists.
 #'
 #' @export
 structure_project <- function() {
@@ -21,13 +21,13 @@ structure_project <- function() {
   }
 }
 
-#' Set External Project Directory
+#' @title Set External Project Directory
 #'
-#' set_external_directory sets a directory external to the project directory
-#' with the config package. The absolute path to the external directory is
-#' stored in a config.yml file that is added to the .gitignore file if it
-#' exists. The external directory can be different for each collaborator of the
-#' project.
+#' @description set_external_directory sets a directory external to the project
+#' directory with the config package. The absolute path to the external
+#' directory is stored in a config.yml file that is added to the .gitignore file
+#' if it exists. The external directory can be different for each collaborator
+#' of the project.
 #'
 #' @param path absolute path to external directory
 #'
@@ -41,11 +41,11 @@ set_external_directory <- function(path) {
   }
 }
 
-#' Return File From External Project Directory
+#' @title Return File From External Project Directory
 #'
-#' external_file_path returns an absolute path to a file in the external
-#' directory set by set_external_directory. The external directory can be
-#' different for each collaborator of the project.
+#' @description external_file_path returns an absolute path to a file in the
+#' external directory set by \code{\link{set_external_directory}}. The external
+#' directory can be different for each collaborator of the project.
 #'
 #' @param path relative path from external directory to file
 #'

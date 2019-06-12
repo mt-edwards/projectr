@@ -7,10 +7,10 @@
 structure_project()
 }
 \description{
-structure_project creates a directory for data, a directory for notebooks and
-a directory for R scripts in the project directory. The directory for
-notebooks contains five subdirectories: 1_import, 2_tidy, 3_explore, 4_model
-and 5_communicate. These directories correspond to the five data analysis
-stages identified in R for Data Science by Hadley Wickham. The data directory
-is added to the .gitignore file if it exists.
+structure_project creates a directory for data, a directory for
+notebooks and a directory for R scripts in the project directory. The
+directory for notebooks contains five subdirectories: 1_import, 2_tidy,
+3_explore, 4_model and 5_communicate. These directories correspond to the
+five data analysis stages identified in R for Data Science by Hadley Wickham.
+The data directory is added to the .gitignore file if it exists.
 }

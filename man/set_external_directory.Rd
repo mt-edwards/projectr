@@ -10,9 +10,9 @@ set_external_directory(path)
 \item{path}{absolute path to external directory}
 }
 \description{
-set_external_directory sets a directory external to the project directory
-with the config package. The absolute path to the external directory is
-stored in a config.yml file that is added to the .gitignore file if it
-exists. The external directory can be different for each collaborator of the
-project.
+set_external_directory sets a directory external to the project
+directory with the config package. The absolute path to the external
+directory is stored in a config.yml file that is added to the .gitignore file
+if it exists. The external directory can be different for each collaborator
+of the project.
 }

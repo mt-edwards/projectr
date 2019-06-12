@@ -13,7 +13,7 @@ external_file_path(path)
 absolute path to file
 }
 \description{
-external_file_path returns an absolute path to a file in the external
-directory set by set_external_directory. The external directory can be
-different for each collaborator of the project.
+external_file_path returns an absolute path to a file in the
+external directory set by \code{\link{set_external_directory}}. The external
+directory can be different for each collaborator of the project.
 }

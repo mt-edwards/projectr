@@ -1,6 +1,6 @@
 Package: projectr
 Title: Data Analysis Prroject Tools
-Version: 0.0.0.9000
+Version: 0.0.1.0
 Authors@R: 
     person(given = "Matthew",
            family = "Edwards",
@@ -8,8 +8,8 @@ Authors@R:
            email = "mtedwards@protonmail.com")
 Description: projectr provides tools to facilitate a data analysis project. 
   These tools include a function to structure the project directory, a function 
-  to set up a directory external to the project directory and a function to 
-  access files in the external directory.
+  to set up a directory external to the project directory, a function to 
+  access files in the external directory and a function to git ignore files.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

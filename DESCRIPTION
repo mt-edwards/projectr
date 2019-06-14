@@ -17,5 +17,6 @@ LazyData: true
 Imports: 
     fs,
     glue,
-    config
+    config,
+    usethis
 RoxygenNote: 6.1.1

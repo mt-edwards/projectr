@@ -1,19 +1,3 @@
-#' @title Add Line to Gitignore File
-#'
-#' @description git_ignore adds a line to the .gitignore file if the .gitignore
-#' file exists and does not contain the line. This function is used in the
-#' \code{\link{structure_project}} function and the
-#' \code{\link{set_external_directory} function.
-#'
-#' @param line line to add
-#'
-#' @export
-git_ignore <- function(line) {
-  if (fs::file_exists(".gitignore") & !any(readLines(".gitignore") == line)) {
-    write(line, file = ".gitignore", append = TRUE)
-  }
-}
-
 #' @title Structure Data Analysis Project
 #'
 #' @description structure_project creates a directory for data, a directory for
@@ -26,7 +10,7 @@ git_ignore <- function(line) {
 #' @export
 structure_project <- function() {
   fs::dir_create("data")
-  git_ignore("data")
+  usethis::use_git_ignore("data")
   fs::dir_create(fs::path("notebooks", "1_import"))
   fs::dir_create(fs::path("notebooks", "2_tidy"))
   fs::dir_create(fs::path("notebooks", "3_explore"))
@@ -47,7 +31,7 @@ structure_project <- function() {
 #' @export
 set_external_directory <- function(path) {
   fs::file_create("config.yml")
-  git_ignore("config.yml")
+  usethis::use_git_ignore("config.yml")
   write("default:", file = "config.yml")
   write(glue::glue('  external_directory: "{path}"'), file = "config.yml", append = TRUE)
 }

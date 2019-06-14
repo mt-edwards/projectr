@@ -9,9 +9,8 @@
 
 This package provides tools to facilitate a data analysis project. These
 tools include a function to structure the project directory, a function
-to set up a directory external to the project directory, a function to
-get the absolute path to files in the external directory and a function
-to git ignore files.
+to set up a directory external to the project directory and a function
+to get the absolute path to files in the external directory.
 
 ## Installation
 
@@ -43,10 +42,4 @@ directory run:
 
 ``` r
 projectr::external_directory_path("file.csv")
-```
-
-To git ingnore a file (e.g. `temp.R`), in the console, run:
-
-``` r
-git_ignore("temp.R")
 ```

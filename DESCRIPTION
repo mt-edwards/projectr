@@ -8,9 +8,9 @@ Authors@R:
            email = "mtedwards@protonmail.com")
 Description: projectr provides tools to facilitate a data analysis project. 
   These tools include a function to structure the project directory, a function 
-  to set up a directory external to the project directory, a function to get the 
-  absolute path to files in the external directory and a function to git ignore 
-  files.
+  to set up a data directory external to the project directory, a function to 
+  get the absolute path to files in the data directory and a function to git 
+  ignore files.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

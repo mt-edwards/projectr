@@ -9,8 +9,8 @@
 
 This package provides tools to facilitate a data analysis project. These
 tools include a function to structure the project directory, a function
-to set up a directory external to the project directory and a function
-to get the absolute path to files in the external directory.
+to set up a data directory external to the project directory and a
+function to get the absolute path to files in the data directory.
 
 ## Installation
 
@@ -30,16 +30,16 @@ To structure a new data analysis project, in the console, run:
 projectr::structure_project()
 ```
 
-To set a directory (e.g. `~/documents/data`) external to the project
-directory, in the console, run:
+To set a data directory (e.g. `~/documents/data`) external to the
+project directory, in the console, run:
 
 ``` r
-projectr::set_external_directory("~/documents/data")
+projectr::set_data_directory("~/documents/data")
 ```
 
-To get the absolute path to a file (e.g. `file.csv`) in the external
+To get the absolute path to a file (e.g. `file.csv`) in the data
 directory run:
 
 ``` r
-projectr::external_directory_path("file.csv")
+projectr::data_directory_path("file.csv")
 ```

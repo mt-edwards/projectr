@@ -4,8 +4,9 @@
 #' notebooks and a directory for R scripts in the project directory. The
 #' directory for notebooks contains five subdirectories: 1_import, 2_tidy,
 #' 3_explore, 4_model and 5_communicate. These directories correspond to the
-#' five data analysis stages identified in R for Data Science by Hadley Wickham.
-#' The data directory is added to the .gitignore file.
+#' five data analysis stages identified in
+#' \href{https://r4ds.had.co.nz/}{R for Data Science} by Hadley Wickham. The
+#' data directory is added to the .gitignore file.
 #'
 #' @export
 structure_project <- function() {
@@ -19,33 +20,36 @@ structure_project <- function() {
   fs::dir_create("R")
 }
 
-#' @title Set External Project Directory
+#' @title Set Data Directory
 #'
-#' @description set_external_directory sets a directory external to the project
-#' directory with the config package. The absolute path to the external
+#' @description set_data_directory sets a directory external to the project
+#' directory with the config package. The absolute path to the data
 #' directory is stored in a config.yml file that is added to the .gitignore. The
-#' external directory can be different for each collaborator of the project.
+#' data directory can be different for each collaborator of the project.
 #'
-#' @param path absolute path to external directory
+#' @param path absolute path to data directory
 #'
 #' @export
-set_external_directory <- function(path) {
+set_data_directory <- function(path) {
   fs::file_create("config.yml")
   usethis::use_git_ignore("config.yml")
   write("default:", file = "config.yml")
-  write(glue::glue('  external_directory: "{path}"'), file = "config.yml", append = TRUE)
+  write(glue::glue('  data_directory: "{path}"'),
+    file = "config.yml",
+    append = TRUE
+  )
 }
 
-#' @title Return File from External Project Directory
+#' @title Data Directory File Path
 #'
-#' @description external_file_path returns an absolute path to a file in the
-#' external directory set by \code{\link{set_external_directory}}. The external
+#' @description data_file_path returns an absolute path to a file in the
+#' data directory set by \code{\link{set_data_directory}}. The data
 #' directory can be different for each collaborator of the project.
 #'
-#' @param path relative path from external directory to file
+#' @param path relative path from data directory to file
 #'
 #' @return absolute path to file
 #' @export
-external_file_path <- function(path) {
-  fs::path(config::get("external_directory"), path)
+data_file_path <- function(path) {
+  fs::path(config::get("data_directory"), path)
 }

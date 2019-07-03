@@ -12,11 +12,11 @@
 structure_project <- function() {
   fs::dir_create("data")
   usethis::use_git_ignore("data")
-  fs::dir_create(fs::path("notebooks", "1_import"))
-  fs::dir_create(fs::path("notebooks", "2_tidy"))
-  fs::dir_create(fs::path("notebooks", "3_explore"))
-  fs::dir_create(fs::path("notebooks", "4_model"))
-  fs::dir_create(fs::path("notebooks", "5_communicate"))
+  fs::dir_create("notebooks", "1_import")
+  fs::dir_create("notebooks", "2_tidy")
+  fs::dir_create("notebooks", "3_explore")
+  fs::dir_create("notebooks", "4_model")
+  fs::dir_create("notebooks", "5_communicate")
   fs::dir_create("R")
 }
 
